@@ -1,23 +1,15 @@
 use std::collections::HashMap;
-use std::fs::File;
-use std::io::prelude::*;
+#[path = "../utils.rs"]
+mod utils;
 
 const SPELLED_NUMBERS: [&str; 9] = [
     "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
 ];
 
 fn main() {
-    let text = read_text_from_file("input/day1.txt");
+    let text = utils::read_text_from_file("input/day1.txt");
     let total = parse_text(&text);
     println!("Total: {}", total);
-}
-
-fn read_text_from_file(path: &str) -> String {
-    let mut file = File::open(path).expect("file not found");
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)
-        .expect("something went wrong reading the file");
-    return contents;
 }
 
 fn parse_text(text: &str) -> i32 {
