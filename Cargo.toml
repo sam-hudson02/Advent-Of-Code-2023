@@ -1,0 +1,12 @@
+[package]
+name = "adventofcode2023"
+version = "0.1.0"
+edition = "2021"
+# add src/day1/main.rs, src/day2/main.rs, etc. to bin if you want to run each day's code separately
+[[bin]]
+name = "day1"
+path = "src/day1/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
